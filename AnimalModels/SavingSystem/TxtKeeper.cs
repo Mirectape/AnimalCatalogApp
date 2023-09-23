@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace AnimalModels.SavingSystem
 {
-    public class XlsxKeeper : IAnimalSaver
+    public class TxtKeeper : IAnimalSaver
     {
         private string _nameOfFile;
-        public XlsxKeeper(string NameOfFile)
+        public TxtKeeper(string NameOfFile)
         {
             this._nameOfFile = NameOfFile;
         }
@@ -22,7 +22,7 @@ namespace AnimalModels.SavingSystem
 
         public void SaveAnimals(List<Animal> animals)
         {
-            using (StreamWriter sw = new StreamWriter($"{_nameOfFile}.xlsx"))
+            using (StreamWriter sw = new StreamWriter($"{_nameOfFile}.txt"))
             {
                 sw.WriteLine(CreateDocx(animals));
             }

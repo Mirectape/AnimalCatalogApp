@@ -8,18 +8,18 @@ namespace AnimalModels.SavingSystem
 {
     public class AnimalWriter
     {
-        public List<Animal> Animals { get; set; }
+        private List<Animal> _animals;
         public IAnimalSaver SavingMode { get; set; }
 
         public AnimalWriter(List<Animal> animalsToSave, IAnimalSaver savingMode)
         {
-            Animals = animalsToSave;
+            _animals = animalsToSave;
             SavingMode = savingMode;
         }
 
         public void SaveAnimals()
         {
-            SavingMode.SaveAnimals(Animals);
+            SavingMode.SaveAnimals(_animals);
         }
     }
 }
