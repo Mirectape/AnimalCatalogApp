@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalCatalogApp", "AnimalCatalogApp\AnimalCatalogApp.csproj", "{D04FCEAC-2807-4736-9A7F-AD49B638ECBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalModels", "AnimalModels\AnimalModels.csproj", "{28F34BB6-98E7-4B65-A7BE-B501DF14A372}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalModels", "AnimalModels\AnimalModels.csproj", "{28F34BB6-98E7-4B65-A7BE-B501DF14A372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalListApp", "AnimalListApp\AnimalListApp.csproj", "{4BDED8AD-805B-4193-9164-59EA032996D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{28F34BB6-98E7-4B65-A7BE-B501DF14A372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28F34BB6-98E7-4B65-A7BE-B501DF14A372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28F34BB6-98E7-4B65-A7BE-B501DF14A372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BDED8AD-805B-4193-9164-59EA032996D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDED8AD-805B-4193-9164-59EA032996D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDED8AD-805B-4193-9164-59EA032996D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDED8AD-805B-4193-9164-59EA032996D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

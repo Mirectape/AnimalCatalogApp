@@ -14,14 +14,13 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AnimalModels;
 
-namespace AnimalCatalogApp
+namespace AnimalListApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        
         public MainWindow()
         {
             InitializeComponent();
