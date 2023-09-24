@@ -11,6 +11,18 @@ namespace AnimalModels
     public class AnimalList : IEnumerable
     {
         private List<Animal> _animals;
+        public List<Animal> Animals
+        {
+            private get
+            {
+                return _animals;
+            }
+            set
+            {
+                _animals = value;
+            }
+        }
+
         public int Count => _animals.Count;
 
         public AnimalList(List<Animal> animals)
