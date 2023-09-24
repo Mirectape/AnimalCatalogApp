@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalModels.SavingSystem
+namespace AnimalCatalogApp.Store
 {
-    public interface IAnimalSaver
+    class NavigationStore
     {
-        void SaveAnimals(List<Animal> animals);
     }
 }
