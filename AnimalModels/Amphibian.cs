@@ -10,6 +10,7 @@ namespace AnimalModels
     {
         public Amphibian(string name, string sex, string color)
         {
+            this.AnimalType = "Amphibian";
             this.Name = name;
             this.Sex = sex;
             this.Color = color;

@@ -7,7 +7,10 @@ using AnimalModels.SerializingSystem;
 
 namespace AnimalModels
 {
-    public class AnimalListHandler
+    /// <summary>
+    /// Main Model
+    /// </summary>
+    public class AnimalListModel
     {
         private AnimalList _animalList;
         public AnimalList AnimalList => this._animalList;
@@ -37,7 +40,7 @@ namespace AnimalModels
         private AnimalSerializer _animalSerializer;
         public IAnimalSerializer SerializerMode { private get; set; }
 
-        public AnimalListHandler(List<Animal> animals)
+        public AnimalListModel(List<Animal> animals)
         {
             _animalList = new AnimalList(animals);
             _index = 0;
@@ -45,7 +48,7 @@ namespace AnimalModels
             _animalSerializer = new AnimalSerializer(animals, SerializerMode);
         }
 
-        public AnimalListHandler(List<Animal> animals, IAnimalSerializer serializerMode)
+        public AnimalListModel(List<Animal> animals, IAnimalSerializer serializerMode)
         {
             _animalList = new AnimalList(animals);
             _index = 0;
