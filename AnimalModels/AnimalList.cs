@@ -13,7 +13,7 @@ namespace AnimalModels
         private List<Animal> _animals;
         public List<Animal> Animals
         {
-            private get
+            get
             {
                 return _animals;
             }

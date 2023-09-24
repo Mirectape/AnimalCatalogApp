@@ -11,7 +11,7 @@ namespace AnimalModels
         public Bird(string name, string sex, string color)
         {
             this.AnimalType = "Bird";
-            this.Name = name;
+            this.AnimalName = name;
             this.Sex = sex;
             this.Color = color;
         }
@@ -19,14 +19,14 @@ namespace AnimalModels
         public override bool Equals(object obj)
         {
             return obj is Bird anotherBird &&
-                this.Name == anotherBird.Name &&
+                this.AnimalName == anotherBird.AnimalName &&
                 this.Sex == anotherBird.Sex &&
                 this.Color == anotherBird.Color;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, Sex, Color);
+            return HashCode.Combine(AnimalType, AnimalName, Sex, Color);
         }
 
         public static bool operator ==(Bird bird_1, Bird bird_2)
@@ -59,7 +59,7 @@ namespace AnimalModels
 
         public override string ToString()
         {
-            return $"Bird: {this.Name} {this.Sex} {this.Color}";
+            return $"Bird: {this.AnimalName} {this.Sex} {this.Color}";
         }
     }
 }

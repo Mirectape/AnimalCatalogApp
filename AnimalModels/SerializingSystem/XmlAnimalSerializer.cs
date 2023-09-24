@@ -22,7 +22,7 @@ namespace AnimalModels.SerializingSystem
         {
             if (!File.Exists(path))
             {
-                throw new FileNotFoundException($"{path} doesn't exist");
+                return new List<Animal>();
             }
             else
             {

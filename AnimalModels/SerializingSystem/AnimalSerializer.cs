@@ -8,18 +8,16 @@ namespace AnimalModels.SerializingSystem
 {
     public class AnimalSerializer
     {
-        private List<Animal> _animals;
         public IAnimalSerializer SerializerMode { get; set; }
 
-        public AnimalSerializer(List<Animal> animals, IAnimalSerializer serializerMode)
+        public AnimalSerializer( IAnimalSerializer serializerMode)
         {
-            _animals = animals;
             SerializerMode = serializerMode;
         }
 
-        public void SaveAnimals(string path)
+        public void SaveAnimals(List<Animal> animals, string path)
         {
-            SerializerMode.SaveAnimals(_animals, path);
+            SerializerMode.SaveAnimals(animals, path);
         }
 
         public List<Animal> GetAnimals(string path)

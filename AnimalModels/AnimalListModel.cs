@@ -45,7 +45,7 @@ namespace AnimalModels
             _animalList = new AnimalList(animals);
             _index = 0;
             SerializerMode = new JsonAnimalSerializer();
-            _animalSerializer = new AnimalSerializer(animals, SerializerMode);
+            _animalSerializer = new AnimalSerializer(SerializerMode);
         }
 
         public AnimalListModel(List<Animal> animals, IAnimalSerializer serializerMode)
@@ -53,12 +53,12 @@ namespace AnimalModels
             _animalList = new AnimalList(animals);
             _index = 0;
             SerializerMode = serializerMode;
-            _animalSerializer = new AnimalSerializer(animals, SerializerMode);
+            _animalSerializer = new AnimalSerializer(SerializerMode);
         }
 
         public void SaveAnimals(string path)
         {
-            _animalSerializer.SaveAnimals(path);
+            _animalSerializer.SaveAnimals(_animalList.Animals, path);
         }
 
         public void LoadAnimals(string path)

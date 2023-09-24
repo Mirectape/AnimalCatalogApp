@@ -34,7 +34,7 @@ namespace AnimalModels
                 var temp = _model.CurrentAnimal;
 
                 _view.AnimalType = temp.AnimalType;
-                _view.Name = temp.Name;
+                _view.AnimalName = temp.AnimalName;
                 _view.Sex = temp.Sex;
                 _view.Color = temp.Color;
             }
@@ -47,12 +47,12 @@ namespace AnimalModels
 
         public void AddAnimal(string animalType)
         {
-            _model.AnimalList.AddAnimal(AnimalFactory.GetAnimal(_view.AnimalType, _view.Name, _view.Sex, _view.Color));
+            _model.AnimalList.AddAnimal(AnimalFactory.GetAnimal(_view.AnimalType, _view.AnimalName, _view.Sex, _view.Color));
         }
 
         public void RemoveAnimal()
         {
-            var animalToRemove = AnimalFactory.GetAnimal(_view.AnimalType, _view.Name, _view.Sex, _view.Color);  
+            var animalToRemove = AnimalFactory.GetAnimal(_view.AnimalType, _view.AnimalName, _view.Sex, _view.Color);
             _model.AnimalList.DeleteAnimal(animalToRemove);
 
             if (_model.AnimalList.Count < 1)
@@ -60,7 +60,7 @@ namespace AnimalModels
                 _model.Index = -1;
 
                 _view.AnimalType = string.Empty;
-                _view.Name = string.Empty;
+                _view.AnimalName = string.Empty;
                 _view.Sex = string.Empty;
                 _view.Color = string.Empty;
             }
@@ -73,7 +73,7 @@ namespace AnimalModels
                 }
 
                 _view.AnimalType = _model.CurrentAnimal.AnimalType;
-                _view.Name = _model.CurrentAnimal.Name;
+                _view.AnimalName = _model.CurrentAnimal.AnimalName;
                 _view.Sex = _model.CurrentAnimal.Sex;
                 _view.Color = _model.CurrentAnimal.Color;
             }
@@ -87,7 +87,7 @@ namespace AnimalModels
                 {
                     _model.Index++;
                     _view.AnimalType = _model.CurrentAnimal.AnimalType;
-                    _view.Name = _model.CurrentAnimal.Name;
+                    _view.AnimalName = _model.CurrentAnimal.AnimalName;
                     _view.Sex = _model.CurrentAnimal.Sex;
                     _view.Color = _model.CurrentAnimal.Color;
                 }
@@ -102,7 +102,7 @@ namespace AnimalModels
                 {
                     _model.Index--;
                     _view.AnimalType = _model.CurrentAnimal.AnimalType;
-                    _view.Name = _model.CurrentAnimal.Name;
+                    _view.AnimalName = _model.CurrentAnimal.AnimalName;
                     _view.Sex = _model.CurrentAnimal.Sex;
                     _view.Color = _model.CurrentAnimal.Color;
                 }

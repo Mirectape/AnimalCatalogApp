@@ -11,7 +11,7 @@ namespace AnimalModels
         public Amphibian(string name, string sex, string color)
         {
             this.AnimalType = "Amphibian";
-            this.Name = name;
+            this.AnimalName = name;
             this.Sex = sex;
             this.Color = color;
         }
@@ -19,14 +19,14 @@ namespace AnimalModels
         public override bool Equals(object obj)
         {
             return obj is Amphibian anotherAmphibian &&
-                this.Name == anotherAmphibian.Name &&
+                this.AnimalName == anotherAmphibian.AnimalName &&
                 this.Sex == anotherAmphibian.Sex &&
                 this.Color == anotherAmphibian.Color;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, Sex, Color);
+            return HashCode.Combine(AnimalType, AnimalName, Sex, Color);
         }
 
         public static bool operator ==(Amphibian amphibian_1, Amphibian amphibian_2)
@@ -59,7 +59,7 @@ namespace AnimalModels
 
         public override string ToString()
         {
-            return $"Amphibian: {this.Name} {this.Sex} {this.Color}";
+            return $"Amphibian: {this.AnimalName} {this.Sex} {this.Color}";
         }
     }
 }

@@ -11,7 +11,7 @@ namespace AnimalModels
         public NullAnimal(string name, string sex, string color)
         {
             this.AnimalType = "Not Determined";
-            this.Name = "Not Determined";
+            this.AnimalName = "Not Determined";
             this.Sex = "Not Determined";
             this.Color = "Not Determined";
         }
